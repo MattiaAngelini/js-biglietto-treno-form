@@ -34,13 +34,13 @@ buttonPrice.addEventListener ('click', function () {
     // input età selezionata dal passeggero
     const userAge = parseInt(document.querySelector("#user-Age").value);
 
-    // prezzo del biglietto
+    // Imposto prezzo del biglietto
     const priceTicket = 0.21; 
 
-    // moltiplichiamo i km percorsi dai passeggeri per il prezzo del biglietto.
+    // Moltiplico i km percorsi dai passeggeri per il prezzo del biglietto.
     const TotalPrice = priceTicket * userKm;
 
-    // Calcoliamo sconti.   
+    // Calcolo sconti:
 
     // sconto 20 under 18.  
     let discountedPrice;
@@ -56,18 +56,17 @@ buttonPrice.addEventListener ('click', function () {
         discountedPrice = TotalPrice;
     }
     
-    // Risultati salvati negli input nelle apposite sezioni.   
+    // Stampo risultati degli input con sconti applicati nella card del biglietto.   
     document.querySelector(".user-name-message").innerHTML = userName;
-    document.querySelector(".total-price-message").innerHTML = discountedPrice.toFixed(2);
+    document.querySelector(".total-price-message").innerHTML = discountedPrice.toFixed(2) + "€";
 
-    // Seleziona l'elemento con la classe "ms-card" e rimuovi la classe "d-none"
+    // Rimuovo la classe "d-none" per fare comparire il biglietto.
     const msCardElement = document.querySelector('.ms-card');
     msCardElement.classList.remove('d-none');
 
 });
 
 // button clear per cancellare dati senza refresh.
-
 const clearButton = document.querySelector('#clear-button');
 clearButton.addEventListener('click', function() {
     document.querySelector('#user-Name').value = '';
@@ -76,9 +75,8 @@ clearButton.addEventListener('click', function() {
     document.querySelector('.total-price-message').innerHTML = '';
     document.querySelector('.user-name-message').innerHTML= '';
 
-     // Seleziona l'elemento con la classe "ms-card" e rimuovi la classe "d-none"
+     // Riapplico classe d-none per fare scomparire biglietto al clear.
      const msCardElement = document.querySelector('.ms-card');
      msCardElement.classList.add('d-none');
 });
 
-// script per comparsa e scomparsa scheda prezzo totale
