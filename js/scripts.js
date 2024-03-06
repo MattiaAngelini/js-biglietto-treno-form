@@ -7,7 +7,6 @@
 //- va applicato uno sconto del 20% per i minorenni
 //- va applicato uno sconto del 40% per gli over 65.
 
-
 //MILESTONE 1:
 //Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente due input
 // e un bottone (non stilizzati), realizziamo le specifiche scritte sopra. La risposta finale
@@ -21,12 +20,14 @@
 //Questo richiederà un minimo di ricerca.
 
 
-
-
 // button che raccoglierà dati passeggeri.
 
 const buttonPrice = document.querySelector("#button-Price");
 buttonPrice.addEventListener ('click', function () {
+
+    // input nome del passeggero.
+    const userName = (document.querySelector("#user-Name").value);
+   console.log(userName)
     // input km percorsi dal passeggero.
     const userKm = parseInt(document.querySelector("#user-Km").value);
    
@@ -54,10 +55,5 @@ buttonPrice.addEventListener ('click', function () {
     else {
         discountedPrice = TotalPrice;
     }
-    console.log(userKm)
-    console.log(userAge)
-    console.log(priceTicket)
-    console.log(TotalPrice)
-    console.log(discountedPrice)
 
 });

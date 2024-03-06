@@ -15,23 +15,56 @@
 </head>
 
 <body>
-    
 
-    <h1 class="ms-prova">Calcola il prezzo del tuo biglietto</h1>
+     <!-------------------------- MAIN --------------------------->
 
+    <main>
+        <section class="container-fluid mt-4">
+        <div class="card text-center">
+            <!-- Card input passengers -->
+            <h2 class="card-header">
+            Calcola il prezzo del tuo biglietto!
+            </h2>
+            <div class="card-body">
 
-    <div>
+                <div class="d-flex justify-content-center">      
+                    <input class="mx-1" placeholder="insert name" id="user-Name" type="text"> 
+                    <input class="mx-1" placeholder="insert km" id="user-Km" type="text"> 
+                    <input class="mx-1" placeholder="insert age" id="user-Age" type="text"> 
+                </div>
 
-        
+                <div class="d-flex justify-content-center mt-3">
+                    <button class="mx-1 btn btn-primary" id="button-Price">CALCOLA</button>
+                    <button class="mx-1 btn btn-secondary" id="button-Price">ANNULLA</button>
+                
+                </div>
+                
+                <!-- Total Price -->
+                <div class="d-flex justify-content-center mt-3">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                        Totale:
+                        </div>
+                        <ul class="list-group list-group-flush">
 
-        <input id="user-Km" type="text"> quanti km
-        <input id="user-Age" type="text"> quanti anni
+                        <li class="list-group-item">An item</li>
 
-        <button id="button-Price">CALCOLA</button>
+                        <li class="list-group-item">A second item</li>
 
+                        <li class="list-group-item">A third item</li>
 
+                        </ul>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="card-footer text-body-secondary">
+            2 days ago
+            </div>
+        </div>
 
-    </div>
+        </section>
+    </main>
 
 
       
