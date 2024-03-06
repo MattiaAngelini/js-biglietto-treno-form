@@ -27,7 +27,7 @@ buttonPrice.addEventListener ('click', function () {
 
     // input nome del passeggero.
     const userName = (document.querySelector("#user-Name").value);
-   console.log(userName)
+   
     // input km percorsi dal passeggero.
     const userKm = parseInt(document.querySelector("#user-Km").value);
    
@@ -45,15 +45,19 @@ buttonPrice.addEventListener ('click', function () {
     // sconto 20 under 18.  
     let discountedPrice;
     if (userAge < 18) {
-        discountedPrice = TotalPrice * 0.2;
+        discountedPrice = TotalPrice - (TotalPrice * 0.2);
     }
 
     // sconto 40 over 65. 
     else if (userAge > 65) {
-        discountedPrice = TotalPrice * 0.4;
+        discountedPrice = TotalPrice - (TotalPrice * 0.4);;
     }
     else {
         discountedPrice = TotalPrice;
     }
+    
+    // Stampiamo i risultati salvati negli input nelle apposite sezioni.
+    document.querySelector(".user-name-message").innerHTML = userName;
+    document.querySelector(".total-price-message").innerHTML = discountedPrice.toFixed(2);
 
 });
