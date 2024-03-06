@@ -56,8 +56,29 @@ buttonPrice.addEventListener ('click', function () {
         discountedPrice = TotalPrice;
     }
     
-    // Stampiamo i risultati salvati negli input nelle apposite sezioni.
+    // Risultati salvati negli input nelle apposite sezioni.   
     document.querySelector(".user-name-message").innerHTML = userName;
     document.querySelector(".total-price-message").innerHTML = discountedPrice.toFixed(2);
 
+    // Seleziona l'elemento con la classe "ms-card" e rimuovi la classe "d-none"
+    const msCardElement = document.querySelector('.ms-card');
+    msCardElement.classList.remove('d-none');
+
 });
+
+// button clear per cancellare dati senza refresh.
+
+const clearButton = document.querySelector('#clear-button');
+clearButton.addEventListener('click', function() {
+    document.querySelector('#user-Name').value = '';
+    document.querySelector('#user-Age').value = '';
+    document.querySelector('#user-Km').value = '';
+    document.querySelector('.total-price-message').innerHTML = '';
+    document.querySelector('.user-name-message').innerHTML= '';
+
+     // Seleziona l'elemento con la classe "ms-card" e rimuovi la classe "d-none"
+     const msCardElement = document.querySelector('.ms-card');
+     msCardElement.classList.add('d-none');
+});
+
+// script per comparsa e scomparsa scheda prezzo totale
