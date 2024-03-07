@@ -21,7 +21,6 @@
 
 
 // button che raccoglierà dati passeggeri.
-
 const buttonPrice = document.querySelector("#button-Price");
 buttonPrice.addEventListener ('click', function () {
 
